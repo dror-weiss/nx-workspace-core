@@ -6,10 +6,9 @@
       "executor": "@nrwl/js:swc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/ts-library",
+        "outputPath": "packages/ts-library/dist",
         "main": "packages/ts-library/src/index.ts",
-        "tsConfig": "packages/ts-library/tsconfig.lib.json",
-        "assets": ["packages/ts-library/*.md"]
+        "tsConfig": "packages/ts-library/tsconfig.lib.json"
       }
     },
     "publish": {
@@ -23,42 +22,6 @@
           "target": "build"
         }
       ]
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["packages/ts-library/**/*.ts"]
-      }
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/ts-library"],
-      "options": {
-        "jestConfig": "packages/ts-library/jest.config.ts",
-        "passWithNoTests": true
-      }
-    },
-    "release": {
-      "executor": "nx:run-commands",
-      "outputs": [],
-      "options": {
-        "command": "npx semantic-release-plus --extends ./packages/ts-library/release.config.js",
-        "parallel": false
-      }
-    },
-    "version": {
-      "executor": "@jscutlery/semver:version",
-      "outputs": [],
-      "options": {
-        "noVerify": true,
-        "skipCommit": true,
-        "skipRootChangelog": true,
-        "skipProjectChangelog": true,
-        "baseBranch": "master",
-        "releaseAs": "minor",
-        "commitMessageFormat": "release: publishing ${projectName} with ${version} [skip ci]"
-      }
     }
   },
   "tags": ["type:util"]
