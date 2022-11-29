@@ -7,6 +7,6 @@
     "directory": "packages/ts-library"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "@dror-weiss:registry": "https://npm.pkg.github.com"
   }
 }
