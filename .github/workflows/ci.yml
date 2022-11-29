@@ -129,7 +129,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npx nx affected --target publish --ver=1.2.3
+          npx nx affected --target publish --ver=1.1.2
 
 #      - name: Setup Git
 #        run: |
