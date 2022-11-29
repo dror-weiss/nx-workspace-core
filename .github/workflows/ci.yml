@@ -128,6 +128,6 @@ jobs:
         if: ${{ success() && (github.event_name != 'pull_request' || github.event.action == 'closed' && github.event.pull_request.merged == true) }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           npx nx affected --target publish --ver=1.2.3
