@@ -15,5 +15,5 @@ export function isNull<T>(val: T | null): val is null {
  * @returns `true` if val is null, `false` otherwise.
  */
 export function isNotNull<T>(val: T | null) {
-  return val !== null;
+  return !isNull(val);
 }
