@@ -1,7 +1,6 @@
 {
   "name": "@dror-weiss/ts-library",
   "version": "0.0.0-semantic-release",
-  "private": true,
   "repository": {
     "url": "https://github.com/dror-weiss/nx-workspace-core.git",
     "directory": "packages/ts-library"
