@@ -6,9 +6,9 @@
       "executor": "@nrwl/js:swc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "packages/ts-library/dist",
+        "tsConfig": "packages/ts-library/tsconfig.lib.json",
         "main": "packages/ts-library/src/index.ts",
-        "tsConfig": "packages/ts-library/tsconfig.lib.json"
+        "outputPath": "packages/ts-library/dist"
       }
     },
     "publish": {
